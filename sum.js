@@ -1,7 +1,7 @@
 
 function ArraySumFunction(arraySum){
 var sum =0;
-for(let i = 0; i < arraySum.length ; i++){
+for(let i = 0; i < arraySum.length; i++){
     var sum = sum + arraySum[i];
     console.log(sum);
 
