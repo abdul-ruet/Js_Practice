@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document Object model</title>
+    <style>
+      article {
+        border: 2px solid tomato;
+        border-radius: 20px;
+        margin: 5px;
+        padding: 5px;
+      }
+      .special h3 {
+        border-radius: 30;
+        color: aquamarine;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section>
+        <p id="name">First first first</p>
+        <p>This is my first DOM</p>
+      </section>
+      <section>
+        <h3>Exploring DOM</h3>
+        <article class="special">
+          <h3>article-1</h3>
+          <p class="author">author -1</p>
+          <p class="description">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae,
+            doloribus illum corrupti rem dolor nesciunt sint eius corporis ipsa
+            eum dolorum ducimus dicta excepturi modi amet earum itaque velit
+            officiis?
+          </p>
+        </article>
+        <article class="special">
+          <h3>article-2</h3>
+          <p class="author">author -2</p>
+          <p class="description">
+            Nam vitae cupiditate laudantium sequi laborum! Iste dicta eveniet
+            tempora! Iure expedita quasi voluptas unde, deleniti ullam tempora,
+            quod earum vitae delectus placeat quo ipsam aliquam debitis magnam
+            et odio?
+          </p>
+        </article>
+        <article id="first-article">
+          <h3>article-3</h3>
+          <p class="author">author -3</p>
+          <p class="description">
+            Dignissimos ipsum hic magni illo laborum, quia sed ratione impedit
+            possimus temporibus fugiat voluptatibus aliquam similique minima
+            cupiditate harum mollitia et consequatur, est ab? Sequi ullam fugit
+            eaque labore quo!
+          </p>
+        </article>
+      </section>
+    </main>
+
+    <script>
+      //   //   var name = (document.getElementById("name").style.color = "green");
+      //   var authors = document.getElementsByClassName("author");
+      //   for (var i = 0; i < authors.length; i++) {
+      //     var element = authors[i];
+      //     console.log(element.innerHTML);
+      //     //element.innerHTML = "Lekhok- " + i;
+      //     element.style.backgroundColor = "red";
+      //     element.style.margin = "30px";
+      //   }
+      const article = document.getElementById("first-article");
+      const newParagraph = document.createElement("p");
+      newParagraph.innerHTML = "This is added by javascript";
+      article.appendChild(newParagraph);
+    </script>
+  </body>
+</html>
